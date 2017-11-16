@@ -1,0 +1,21 @@
+% For poler i en vifte
+
+theta = pi/30;
+alpha = pi/50;
+r = 22;
+j = sqrt(-1);
+
+for i=1:2:n
+    alpha = alpha + theta;
+    pole = r * cos(alpha) + j * r * sin(alpha);
+    poles(i) = -pole;
+    poles(i+1) = -conj(pole);
+end
+
+% For poler på en rett linje
+pole = -10;
+
+for i=1:1:n
+    poles(i)=pole;
+    pole = pole - 1.5;
+end
